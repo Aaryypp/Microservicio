@@ -27,7 +27,7 @@ public class Factura {
     private LocalDate fecha;
 
     @Enumerated(EnumType.STRING)
-    private TipoPago tipoPago;
+    private Tipo_Pago tipoPago;
 
     private Double descuento;
     private Double total;
