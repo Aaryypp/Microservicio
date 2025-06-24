@@ -5,14 +5,13 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "tipo_pago")
-@Data // Incluye @Getter, @Setter, @ToString, @EqualsAndHashCode y @RequiredArgsConstructor
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Tipo_Pago {
+public class TipoPago {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
     private Long id;
 
     @Column(name = "tipo", nullable = false)

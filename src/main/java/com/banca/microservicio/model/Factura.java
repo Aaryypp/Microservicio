@@ -26,8 +26,9 @@ public class Factura {
 
     private LocalDate fecha;
 
-    @Enumerated(EnumType.STRING)
-    private Tipo_Pago tipoPago;
+    @ManyToOne
+    @JoinColumn(name = "tipo_pago_id", nullable = false)
+    private TipoPago tipoPago;
 
     private Double descuento;
     private Double total;
