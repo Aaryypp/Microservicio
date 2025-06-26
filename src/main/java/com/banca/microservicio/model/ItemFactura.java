@@ -1,5 +1,6 @@
 package com.banca.microservicio.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -22,6 +23,7 @@ public class ItemFactura {
 
     @ManyToOne
     @JoinColumn(name = "factura_id", nullable = false)
+    @JsonBackReference
     private Factura factura;
 
     @ManyToOne

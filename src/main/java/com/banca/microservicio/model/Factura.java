@@ -1,5 +1,6 @@
 package com.banca.microservicio.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -34,5 +35,6 @@ public class Factura {
     private Double total;
 
     @OneToMany(mappedBy = "factura", cascade = CascadeType.ALL)
+    @JsonManagedReference
     private List<ItemFactura> items;
 }
